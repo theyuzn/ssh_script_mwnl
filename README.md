@@ -2,8 +2,8 @@
 Connect to mwnl server through ssh
 
 ## Pre-requists
-* You need to gen ssh public key in server
-```sh=
+* You need to gen ssh public key in server AT FIRST
+```sh
 # To generate the public ssh key of your own device
 $ssh-keygen
 
@@ -13,10 +13,14 @@ $ ssh-copy-id -i ~/.ssh/id_rsa.pub USER@HOST
 ```
 
 * Create and edit the ssh.config
-```sh=
+```sh
 $touch ssh.conf
-$vim ssh.conf
+$vim ssh.conf 
+# Please ensure your format is the same as following
+```
 
+```sh
+# ssh.conf
 HOST_IP=127.0.0.1
 HOST_NAME_1=user_name_1
 HOST_NAME_2=user_name_2
@@ -26,7 +30,7 @@ HOST_NAME_5=empty
 ```
 
 ## Happy use
-```sh=
+```sh
 chmod +x login_mwnl.sh
 $./login_mwnl.sh
 ```
